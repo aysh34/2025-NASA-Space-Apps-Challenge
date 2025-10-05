@@ -29,7 +29,6 @@ Note: Uses NASA open data. Not affiliated with or endorsed by NASA.
 ## Solution
 - Approach: 1D CNN with residual blocks and attention on realistic transit simulations
 - Novelty: Realistic false‑positive modeling + high‑performance CNN + Streamlit UI
-- MVP: Local training pipeline and interactive inference app
 - Dependencies: Python 3.11+, TensorFlow ≥2.13, scikit‑learn ≥1.2, optional Docker
 
 ---
@@ -74,7 +73,7 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 
 # 3) Train and evaluate
-python main.py
+python exoplanet_detection.py
 
 # 4) Launch UI
 streamlit run app.py
@@ -93,7 +92,7 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 
 # 3) Train and evaluate
-python main.py
+python exoplanet_detection.py
 
 # 4) Launch UI
 streamlit run app.py
@@ -105,8 +104,8 @@ streamlit run app.py
 ```
 .
 ├─ app.py               # Streamlit UI
-├─ exoplanet_detection.py # Train/evaluate 
-predict_exoplanet.py
+├─ exoplanet_detection.py
+├─ predict_exoplanet.py
 ├─ data/                # Raw/processed data
 ├─ models/              # Saved models
 ├─ results/             # Metrics/reports/figures
