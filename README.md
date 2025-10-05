@@ -13,7 +13,6 @@ Note: Uses NASA open data. Not affiliated with or endorsed by NASA.
 - [Architecture](#architecture)
 - [NASA Data and APIs](#nasa-data-and-apis)
 - [Quick Start](#quick-start)
-- [Configuration](#configuration)
 - [Project Structure](#project-structure)
 - [Acknowledgments and License](#acknowledgments-and-license)
 
@@ -101,16 +100,6 @@ streamlit run app.py
 ```
 
 ---
-
-## Configuration
-- .env or config.yaml supports:
-    - DATA_DIR, MODELS_DIR, RESULTS_DIR
-    - TRAIN/VAL split, epochs, batch size, learning rate
-    - Input length, normalization options
-- Example: see config/config.example.yaml
-
----
-
 
 ## Project Structure
 ```
