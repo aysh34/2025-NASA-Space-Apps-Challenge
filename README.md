@@ -11,7 +11,7 @@ Note: Uses NASA open data. Not affiliated with or endorsed by NASA.
 - [Solution](#solution)
 - [Key Features](#key-features)
 - [Architecture](#architecture)
-- [NASA Data and APIs](#nasa-data-and-apis)
+- [NASA Data](#nasa-data-and-apis)
 - [Quick Start](#quick-start)
 - [Project Structure](#project-structure)
 - [Acknowledgments and License](#acknowledgments-and-license)
@@ -122,7 +122,6 @@ streamlit run app.py
 
 ---
 
-## Acknowledgments and License
+## Acknowledgments
 - Data courtesy of NASA missions and archives listed above
 - Not affiliated with or endorsed by NASA
-- License: see LICENSE file
