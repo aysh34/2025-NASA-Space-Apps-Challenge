@@ -1,0 +1,8 @@
+               precision    recall  f1-score   support
+
+Non-Exoplanet       0.99      0.91      0.95       848
+    Exoplanet       0.93      0.99      0.96      1066
+
+     accuracy                           0.96      1914
+    macro avg       0.96      0.95      0.96      1914
+ weighted avg       0.96      0.96      0.96      1914
