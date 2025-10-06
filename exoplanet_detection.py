@@ -1,7 +1,6 @@
 """
 NASA Space Apps Challenge 2025
-Exoplanet Detection - IMPROVED VERSION
-High-Performance 1D CNN with 90%+ Accuracy
+Exoplanet Detection
 """
 
 import numpy as np
@@ -39,7 +38,6 @@ CONFIG = {
     'test_size': 0.15,
     
     # Directories
-    # Use relative directories inside the current workspace (script) folder
     'data_dir': 'data',
     'model_dir': 'models',
     'results_dir': 'results',
@@ -51,12 +49,6 @@ CONFIG = {
 # ============================================================================
 
 def create_directories():
-    """Create required directories inside the project workspace.
-
-    This converts the relative CONFIG paths to absolute paths based on the
-    script location so saving works the same on Colab, local, or other
-    environments.
-    """
     base_dir = Path(__file__).resolve().parent
 
     for key in ['data_dir', 'model_dir', 'results_dir', 'plots_dir']:
@@ -198,7 +190,7 @@ def load_and_preprocess_data():
     return X_train_cnn, X_test_cnn, y_train, y_test
 
 # ============================================================================
-# IMPROVED MODEL ARCHITECTURE
+#        MODEL ARCHITECTURE
 # ============================================================================
 
 def build_improved_cnn():
@@ -330,7 +322,7 @@ def train_model(model, X_train, y_train):
     import joblib
     joblib.dump(history.history, os.path.join(CONFIG['model_dir'], 'history.pkl'))
 
-    # Save the final model explicitly so it's always available in the workspace.
+    # Save the final model.
     try:
         final_model_path = os.path.join(CONFIG['model_dir'], 'final_model.h5')
         model.save(final_model_path)
@@ -413,7 +405,7 @@ def plot_results(y_test, y_pred, y_pred_proba):
     plt.show()
     plt.close()
     
-    print("\n✓ Visualizations saved")
+    print("\nVisualizations saved")
 
 # ============================================================================
 # MAIN
@@ -436,11 +428,11 @@ def main():
     metrics = evaluate_model(model, X_test, y_test)
     
     print("\n" + "="*70)
-    print("✓ PIPELINE COMPLETE!")
+    print("PIPELINE COMPLETE!")
     print("="*70)
-    print(f"\n🎯 Final Accuracy: {metrics['accuracy']*100:.2f}%")
-    print(f"📁 Model: {CONFIG['model_dir']}/best_model.h5")
-    print(f"📊 Results: {CONFIG['results_dir']}/")
+    print(f"\nFinal Accuracy: {metrics['accuracy']*100:.2f}%")
+    print(f"Model: {CONFIG['model_dir']}/best_model.h5")
+    print(f"Results: {CONFIG['results_dir']}/")
     print("="*70)
 
 if __name__ == "__main__":
